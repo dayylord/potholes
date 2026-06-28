@@ -1,0 +1,7 @@
+Hi everyone, today I’m showing a simple prototype for pothole detection using an ESP32‑CAM and an ultrasonic sensor. Most research uses accelerometers to detect jolts, but I asked: what if we measure the depth of the road surface instead, and capture a photo for proof?”
+
+“Here’s the hardware: the ESP32‑CAM handles image capture, and the ultrasonic sensor points down at the road to measure distance. When the sensor detects a sudden dip beyond a threshold, the camera snaps a photo. That image is then sent wirelessly to a local Python server running on my laptop.”
+ 
+“I’ll simulate the road by placing my hand in front of the sensor and remove it to simulate the drop. The ultrasonic sensor detects the depth change, triggers the ESP32‑CAM, and instantly sends a photo to the server. On my laptop, you can see the image saved with a timestamp. This gives us both a depth signature and a visual frame as evidence.”
+
+“This demo shows how low‑cost IoT hardware can move beyond complaint‑driven reporting. By combining depth sensing with visual proof, municipalities could automate pothole detection. It’s simple, scalable, and doesn’t rely on GPS or expensive sensors. Next steps could include adding geolocation or integrating with reporting dashboards.”
